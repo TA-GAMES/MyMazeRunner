@@ -1,5 +1,7 @@
 <div dir='rtl' lang='he'>
 
+## קישור למשחק
+https://talabed.itch.io/maze-runner-game-sample
 ## מטרה
 על השחקן לאסוף את ביצת הדרקון הממוקמת במבוך ולהביא אותה למקומה המיועד בקרחת.
 
