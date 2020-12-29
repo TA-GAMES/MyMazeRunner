@@ -17,5 +17,14 @@ https://talabed.itch.io/maze-runner-game-sample
 * [MonsterWalk](https://github.com/TA-GAMES/MyMazeRunner/blob/main/Assets/Scripts/MonsterWalk.cs) - משאיר את אנימציית המפלצת במצב Walking באופן קבוע.
 * [OscillatorMovement](https://github.com/TA-GAMES/MyMazeRunner/blob/main/Assets/Scripts/OscillatorMovement.cs) - גורם למי שמחזיק בו לנוע בתנועת מטוטלת קבועה.
 * [PlaceObject](https://github.com/TA-GAMES/MyMazeRunner/blob/main/Assets/Scripts/PlaceObject.cs) - כאשר מזהה התנגשות, חושף אובייקט מוסתר (משמש לצורך הצבת הביצה במקומה לאחר שהשחקן אוסף אותה).
+* [PlayerCollect](https://github.com/TA-GAMES/MyMazeRunner/blob/main/Assets/Scripts/PlayerCollect.cs) - מאפשר לשחקן לאסוף חפץ מסוים.
+* [PlayerMoveControl](https://github.com/TA-GAMES/MyMazeRunner/blob/main/Assets/Scripts/PlayerMoveControl.cs) - שולט על תנועת השחקן. למעשה מה שמזיז את השחקן זה מצב האנימציה בו הוא נמצא בכל פעם. לחיצה על W או חץ למעלה מקדמת אותו קדימה, לחיצה על A,D או חץ ימינה, חץ שמאלה מאפשרת לו להסתובב לצד אותו הוא בחר. לחיצה על LEFT SHIFT יחד עם W או חץ למעלה מאפשרת לשחקן לרוץ.
+* [ScoreScript](https://github.com/TA-GAMES/MyMazeRunner/blob/main/Assets/Scripts/ScoreScript.cs) - שולט על ניקוד השחקן. לשחקן יש גם ניקוד כולל שנצבר לאורך המשחק וגם ניקוד לכל שלב (מוסתר מהשחקן) שלפיו נקבע מתי הוא יכול להמשיך לשלב הבא.
 
+## תיקונים שצריכים להעשות
+* אניציית ריצה לשחקן - נראית מצחיק, צריך להחליף.
+* תנועת מפלצת בשלב 2 - לגרום לו להסתובב.
+* הנחת הביצה במקום - להבין למה ההתנגשות שם קורית אך עדיין השחקן נכנס לתוך הקובייה.
+* לאפשר לשחקן לקפוץ.
+* בניית שלבים נוספים ומסובכים יותר.
 </div>
