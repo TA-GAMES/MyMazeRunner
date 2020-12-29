@@ -18,6 +18,7 @@ public class CollideMonster : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName);
             ScoreScript.playerScore = ScoreScript.playerScore - ScoreScript.LevelScore;
+            ScoreScript.LevelScore = 0;
         }
     }
 }

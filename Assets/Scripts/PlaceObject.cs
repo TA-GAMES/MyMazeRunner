@@ -14,9 +14,9 @@ public class PlaceObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && enabled)
+        if (other.tag == "TargetPlace" && enabled)
         {
-            if (ScoreScript.playerScore == 100)
+            if (ScoreScript.LevelScore == 100)
             {
                 ga.gameObject.SetActive(true);
                 ScoreScript.playerScore += 100;
