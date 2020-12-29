@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 /**
  * This component will make the target object shown once the player wanna put it in place
@@ -16,12 +18,11 @@ public class PlaceObject : MonoBehaviour
         {
             if (ScoreScript.playerScore == 100)
             {
-                if (Input.GetKey(KeyCode.Space))
-                {
-                    ga.gameObject.SetActive(true);
-                    ScoreScript.playerScore += 100;
-                }
+                ga.gameObject.SetActive(true);
+                ScoreScript.playerScore += 100;
+                ScoreScript.LevelScore += 100;
             }
+            
         }
     }
 }
