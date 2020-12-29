@@ -19,11 +19,13 @@ public class CharacterKeyboardMover: MonoBehaviour {
     Vector3 velocity;
 
     void Update()  {
-        float x = Input.GetAxis("Horizontal");
+        
+        //float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         //if (x == 0 && z == 0) return;
-        velocity.x = x * _speed;
-        velocity.z = z * _speed;
+        //velocity.x = x * _speed;
+        if (z>0)
+            velocity.z = z * _speed;
         if (!_cc.isGrounded) {
             velocity.y -= _gravity*Time.deltaTime;
         }

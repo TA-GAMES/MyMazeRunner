@@ -17,7 +17,7 @@ public class CollideMonster : MonoBehaviour
         if (other.tag == "Monster" && enabled)
         {
             SceneManager.LoadScene(sceneName);
-            ScoreScript.playerScore = 0;
+            ScoreScript.playerScore = ScoreScript.playerScore - ScoreScript.LevelScore;
         }
     }
 }

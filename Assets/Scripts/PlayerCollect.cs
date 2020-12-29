@@ -13,11 +13,9 @@ public class PlayerCollect : MonoBehaviour
     {
         if (other.tag == target.tag && enabled)
         {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                other.gameObject.SetActive(false);
-                ScoreScript.playerScore += 100;
-            }
+            Destroy(target);
+            ScoreScript.playerScore += 100;
+            ScoreScript.LevelScore += 100;
         }
     }
 }

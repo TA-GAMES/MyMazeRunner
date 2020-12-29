@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class ScoreScript : MonoBehaviour
 {
     public static int playerScore = 0;
+    public static int LevelScore = 0;
     Text score;
 
     // Start is called before the first frame update
