@@ -10,13 +10,13 @@ using UnityEngine.SceneManagement;
 public class CollideMonster : MonoBehaviour
 {
 
-    [SerializeField] string sceneName;
+    
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Monster" && enabled)
         {
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             ScoreScript.playerScore = ScoreScript.playerScore - ScoreScript.LevelScore;
             ScoreScript.LevelScore = 0;
         }

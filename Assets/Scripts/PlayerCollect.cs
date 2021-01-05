@@ -3,19 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
- * This component aloowed the player to collect object
+ * This component allowed the player to collect object
  */
 
 public class PlayerCollect : MonoBehaviour
 {
-    [SerializeField] GameObject target;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == target.tag && enabled)
+        if (other.tag == "Player" && enabled)
         {
-            Destroy(target);
-            ScoreScript.playerScore += 100;
-            ScoreScript.LevelScore += 100;
+            if (this.tag == "Target")
+            {
+                Destroy(this.gameObject);
+                ScoreScript.playerScore += 100;
+                ScoreScript.LevelScore += 100;
+            }
+
+            else if (this.tag == "Apple")
+            {
+                Destroy(this.gameObject);
+                ScoreScript.playerScore += 50;
+                ScoreScript.LevelScore += 50;
+            }
+
+            else if (this.tag == "Gate")
+            {
+                ScoreScript.playerScore += 100;
+                ScoreScript.LevelScore += 100;
+            }
         }
     }
 }
