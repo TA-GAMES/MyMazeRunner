@@ -3,7 +3,7 @@
 ## קישור למשחק
 https://talabed.itch.io/maze-runner-game-sample
 ## מטרה
-על השחקן לאסוף את ביצת הדרקון הממוקמת במבוך ולהביא אותה למקומה המיועד בקרחת.
+בכל שלב על השחקן להשלים את המשימה המוצגת לו בתחילת השלב בכדי להשלים את השלב ולעבור לשלב הבא.
 
 ## תיאור סקריפטים
 * [CharacterKeyboardMover](https://github.com/TA-GAMES/MyMazeRunner/blob/main/Assets/Scripts/CharacterKeyboardMover.cs) - שימש במקור לתזוזת השחקן. כרגע לא בשימוש.
