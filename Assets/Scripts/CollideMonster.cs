@@ -9,16 +9,13 @@ using UnityEngine.SceneManagement;
 
 public class CollideMonster : MonoBehaviour
 {
-
-    
-
+    public GameObject killedByMonsterPanel;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Monster" && enabled)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            ScoreScript.playerScore = ScoreScript.playerScore - ScoreScript.LevelScore;
-            ScoreScript.LevelScore = 0;
+            PlayerMoveControl.ready = false;
+            killedByMonsterPanel.SetActive(true);
         }
     }
 }

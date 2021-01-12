@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject levelIntroUI;
     public GameObject completeLevelUI;
+    public static bool finish = false;
 
     void Update()
     {
@@ -25,10 +26,17 @@ public class LevelManager : MonoBehaviour
             CompleteLevel();
         }
 
-        if (ScoreScript.LevelScore == 300 && SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 2 && finish)
         {
             CompleteLevel();
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 3 && finish)
+        {
+            CompleteLevel();
+        }
+
+
     }
 
     public void CompleteLevel()

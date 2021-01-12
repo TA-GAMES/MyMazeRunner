@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMoveControl : MonoBehaviour
 {
     Animator anim;
+    public static bool ready = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +16,15 @@ public class PlayerMoveControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anim.SetFloat("Vertical", Input.GetAxis("Vertical"));
-        anim.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        anim.SetBool("Running", Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W));
-        //anim.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
-        //anim.SetBool("Walk", Input.GetKey(KeyCode.UpArrow));
-        //anim.SetBool("GoLeft", Input.GetKey(KeyCode.LeftArrow));
-        //anim.SetBool("GoRight", Input.GetKey(KeyCode.RightArrow));
+        if (Input.GetKey(KeyCode.Space))
+        {
+            ready = true;
+        }
+        if (ready)
+        {
+            anim.SetFloat("Vertical", Input.GetAxis("Vertical"));
+            anim.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+            anim.SetBool("Running", Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W));
+        }
     }
 }

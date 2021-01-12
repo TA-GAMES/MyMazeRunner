@@ -22,6 +22,7 @@ public class PlayerCollect : MonoBehaviour
             else if (this.tag == "Apple")
             {
                 Destroy(this.gameObject);
+                ApplesScore.apples += 1;
                 ScoreScript.playerScore += 50;
                 ScoreScript.LevelScore += 50;
             }
@@ -30,6 +31,15 @@ public class PlayerCollect : MonoBehaviour
             {
                 ScoreScript.playerScore += 100;
                 ScoreScript.LevelScore += 100;
+                LevelManager.finish = true;
+            }
+
+            else if (this.tag == "Knife")
+            {
+                Destroy(this.gameObject);
+                KnifeScore.knifes += 1;
+                ScoreScript.playerScore += 50;
+                ScoreScript.LevelScore += 50;
             }
         }
     }
