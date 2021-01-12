@@ -28,9 +28,4 @@ https://talabed.itch.io/maze-runner-game-sample
 * [ScoreScript](https://github.com/TA-GAMES/MyMazeRunner/blob/main/Assets/Scripts/ScoreScript.cs) - שולט על ניקוד השחקן. לשחקן יש גם ניקוד כולל שנצבר לאורך המשחק וגם ניקוד לכל שלב (מוסתר מהשחקן) שלפיו נקבע מתי הוא יכול להמשיך לשלב הבא.
 * [Timer](https://github.com/TA-GAMES/MyMazeRunner/blob/main/Assets/Scripts/Timer.cs) - שולט בזמן בו ניתן להשלים כל שלב.
 
-
-## תיקונים שצריכים להעשות
-* תנועת מפלצת בשלב 2 - לגרום לו להסתובב.
-* לאפשר לשחקן לקפוץ.
-* בניית שלבים נוספים ומסובכים יותר.
 </div>
